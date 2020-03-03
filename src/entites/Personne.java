@@ -13,6 +13,7 @@ public class Personne {
 	}
 
 	public Personne(String nvNom, String nvPrenom, AdressePostale a) {
+		// this(nvNom, nvPrenom);   on peut virer les deux lignes suivantes et écrire ça a la place
 		nom = nvNom;
 		prenom = nvPrenom;
 		this.adresse = a;
@@ -24,12 +25,12 @@ public class Personne {
 
 	public void modifierNom(String nNom) {
 		this.nom = nNom;
-		System.out.println(nom.toUpperCase() +" "+ prenom);
+		afficherNomEnMajuscule();
 	}
 
 	public void modifierPrenom(String nPrenom) {
 		this.prenom = nPrenom;
-		System.out.println(nom.toUpperCase() +" "+ prenom);
+		afficherNomEnMajuscule();
 	}
 
 	public void modifierAdresse(AdressePostale nAdresse) {

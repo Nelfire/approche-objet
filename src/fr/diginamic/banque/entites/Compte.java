@@ -42,12 +42,11 @@ public class Compte {
 		this.soldeDuCompte = soldeDuCompte;
 	}
 
-	/*
+	
 	@Override
 	public String toString() {
 		return "Compte [numeroDeCompte=" + numeroDeCompte + ", soldeDuCompte=" + soldeDuCompte + "]";
 	}
-	*/
 	
 	
 	

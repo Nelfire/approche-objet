@@ -2,7 +2,10 @@ package fr.diginamic.banque.entites;
 
 public class Compte {
 
+	/** numeroDeCompte */
 	private int numeroDeCompte;
+	
+	/** soldeDuCompte */
 	private int soldeDuCompte;
 	
 	/**

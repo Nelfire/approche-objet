@@ -15,28 +15,28 @@ public class Compte {
 	}
 
 	/**
-	 * @return the numeroDeCompte
+	 * @return Retourne le numéro de compte
 	 */
 	public int getNumeroDeCompte() {
 		return numeroDeCompte;
 	}
 
 	/**
-	 * @param numeroDeCompte the numeroDeCompte to set
+	 * @param Définir numéro de compte
 	 */
 	public void setNumeroDeCompte(int numeroDeCompte) {
 		this.numeroDeCompte = numeroDeCompte;
 	}
 
 	/**
-	 * @return the soldeDuCompte
+	 * @return Retourne solde du compte
 	 */
 	public int getSoldeDuCompte() {
 		return soldeDuCompte;
 	}
 
 	/**
-	 * @param soldeDuCompte the soldeDuCompte to set
+	 * @param Définir solde du compte
 	 */
 	public void setSoldeDuCompte(int soldeDuCompte) {
 		this.soldeDuCompte = soldeDuCompte;

@@ -7,4 +7,8 @@ public class SalleDeBain extends Piece {
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public String getType() {
+		return "Salle de bain";
+	}
 }

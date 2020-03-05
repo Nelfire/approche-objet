@@ -1,6 +1,6 @@
 package fr.diginamic.maison;
 
-public abstract class Piece {
+abstract public class Piece {
 
 	
 	/** superficie de la piece */
@@ -45,6 +45,8 @@ public abstract class Piece {
 	public void setNumeroEtage(int numeroEtage) {
 		this.numeroEtage = numeroEtage;
 	}
+
+	public abstract String getType();
 	
 	
 }

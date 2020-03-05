@@ -6,5 +6,10 @@ public class Chambre extends Piece {
 		super(superficie, numeroEtage);
 		// TODO Auto-generated constructor stub
 	}
+	
+	@Override
+	public String getType() {
+		return "Chambre";
+	}
 
 }

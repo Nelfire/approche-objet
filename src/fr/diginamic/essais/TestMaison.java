@@ -1,22 +1,24 @@
 package fr.diginamic.essais;
 
-import fr.diginamic.maison.Chambre;
-import fr.diginamic.maison.Cuisine;
-import fr.diginamic.maison.SalleDeBain;
-import fr.diginamic.maison.Salon;
-import fr.diginamic.maison.WC;
+import fr.diginamic.maison.*;
 
 public class TestMaison {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-		Chambre piece1 = new Chambre(12,1);
-		Salon piece2 = new Salon(30,0);
-		Cuisine piece3 = new Cuisine(20,0);
-		SalleDeBain piece4 = new SalleDeBain(15,1);
-		WC piece5 = new WC(8,1);
+		Maison m = new Maison();
 		
+		m.ajouterPiece(new Chambre(12,1));
+		m.ajouterPiece(new Salon(30,0));
+		m.ajouterPiece(new Cuisine(18,0));
+		m.ajouterPiece(new Chambre(14,2));
+		m.ajouterPiece(new Chambre(21,2));
+		m.ajouterPiece(new SalleDeBain(12,1));
+		m.ajouterPiece(new WC(12,1));
+		
+		System.out.println(m);
+		
+		System.out.println(m.getSuperficieTotale());
 		
 		
 		

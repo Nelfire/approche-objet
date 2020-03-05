@@ -7,4 +7,8 @@ public class Cuisine extends Piece {
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public String getType() {
+		return "Cuisine";
+	}
 }

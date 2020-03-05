@@ -1,6 +1,5 @@
 package fr.diginamic.essais;
 
-import fr.diginamic.salaire.Intervenant;
 import fr.diginamic.salaire.Pigiste;
 import fr.diginamic.salaire.Salarie;
 

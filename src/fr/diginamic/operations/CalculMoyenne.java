@@ -29,11 +29,15 @@ public class CalculMoyenne {
 	}
 	
 	public double calcul() {
-		double val = 0;
+		double somme = 0;
+		double moyenne = 0;
+		int tailleTableau = tab2.length;
 		for(int i=0; i<tab2.length;i++) {
-			val = val + tab2[i];
+			somme = somme + tab2[i];
+			
 		}
-		return val;
+		moyenne = somme / tailleTableau;
+		return moyenne;
 	}
 	
 	

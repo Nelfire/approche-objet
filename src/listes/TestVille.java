@@ -9,7 +9,7 @@ public class TestVille {
 		String villeLaPlusPeuplee = "";
 		int nbHabitantVilleLaPlusPeuplee = 0;
 		int indexVilleLaMoinsPeuplee = 0;
-		
+		 
 		//Ajout des villes
 		ArrayList<Ville> tableau = new ArrayList<>();
 		tableau.add(new Ville("Nice",343_000));

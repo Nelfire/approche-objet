@@ -17,7 +17,7 @@ public class TestCombat {
 		Scanner sc = new Scanner(System.in);
 		String message;
 		//Création d'un personnage, à défaut de pas pouvoir le faire dans le switch
-		Personnage p1 = new Personnage("Nelfire");
+		Personnage p1 = new Personnage(null);
 		// Points du joueur
 		int points = 0;
 
@@ -37,8 +37,8 @@ public class TestCombat {
 			case 1: // Créer un personnage
 				// Personnage p1 = new Personnage();
 				System.out.println("Bienvenue dans ce monde, aventurier! Comment vous appellez vous ?");
-				String nomJoueur = sc.nextLine();
-				Personnage personnage = new Personnage(nomJoueur);
+				String nomJoueur = sc.next();
+				//p1 = new Personnage(nomJoueur);
 				System.out.println("Très bien "+nomJoueur+" à vous de jouer maintenant.");
 				
 				break;

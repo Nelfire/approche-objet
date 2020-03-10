@@ -38,7 +38,7 @@ public class TestCombat {
 				// Personnage p1 = new Personnage();
 				System.out.println("Bienvenue dans ce monde, aventurier! Comment vous appellez vous ?");
 				String nomJoueur = sc.next();
-				//p1 = new Personnage(nomJoueur);
+				p1 = new Personnage(nomJoueur);
 				System.out.println("Très bien "+nomJoueur+" à vous de jouer maintenant.");
 				
 				break;

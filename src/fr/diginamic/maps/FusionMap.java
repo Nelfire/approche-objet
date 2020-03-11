@@ -57,7 +57,7 @@ public class FusionMap {
 		while(iteratorMap3.hasNext()) {
 			Integer cle = iteratorMap3.next();
 			String valeur = map3.get(cle);
-			System.out.println(valeur);
+			System.out.println(cle+ "--> "+valeur);
 		}
 		
 	}

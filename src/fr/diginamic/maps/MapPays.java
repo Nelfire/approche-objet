@@ -1,7 +1,6 @@
 package fr.diginamic.maps;
 
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -25,8 +24,12 @@ public class MapPays {
 		}
 		
 		// Parcous de la map à la recherche du plus petit pays
-		Collection<Pays> collPays = mapPays.values();
-		Iterator<Pays> iterPays = collPays.iterator();
+		
+//		Collection<Pays> collPays = mapPays.values();
+//		Iterator<Pays> iterPays = collPays.iterator();
+//		ou
+		
+		Iterator<Pays> iterPays = mapPays.values().iterator();
 		
 		Pays plusPetitPays = iterPays.next();
 		while(iterPays.hasNext()) {
@@ -39,7 +42,7 @@ public class MapPays {
 		mapPays.remove(plusPetitPays.getNom());
 		System.out.println("------------");
 		//Affichage du resultat final
-		for(Pays pays: collPays) {
+		for(Pays pays: mapPays.values()) {
 			System.out.println(pays);
 		}
 

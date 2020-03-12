@@ -22,6 +22,7 @@ public class TestTriPays {
 		
 		
 		
+		
 
 		Collections.sort(liste,new ComparatorPibHabitant());
 		for(Pays pays: liste) {

@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
 import org.apache.commons.io.FileUtils;
 
@@ -18,6 +19,7 @@ public class LectureFichier {
 		List<String> lignes = FileUtils.readLines(file, "UTF-8");
 
 		// Variables
+		Scanner sc = new Scanner(System.in);
 		int populationOccitanie = 0;
 		int PlusPetiteVilleDuDepartementHeraut = 1_000_000_000;
 		String nomPlusPetiteVilleDuDepartementHeraut = "";
@@ -28,7 +30,7 @@ public class LectureFichier {
 		// Création de d'un arrayList vide, pour y accueillir les 10 villes les plus
 		// peuplées d'occitanie. Etape 8
 		ArrayList<Ville> villesLesPlusGrandesOccitanie = new ArrayList<>();
-		ArrayList<Ville> departementsOccitanie = new ArrayList<>();
+		ArrayList<Ville> listeCompleteVilles = new ArrayList<>();
 		
 
 		for (int i = 1; i < lignes.size(); i++) {
@@ -49,6 +51,7 @@ public class LectureFichier {
 
 			// On instancie des villes en rapport aux données récupéré ci-dessus
 			Ville ville = new Ville(codeRegion, nomRegion, codeDepartement, codeCommune, nomCommune, population);
+			listeCompleteVilles.add(ville);
 
 			/*
 			 * Etape 3 : o Recherchez dans la liste la ville de Montpellier et affichez
@@ -171,7 +174,6 @@ public class LectureFichier {
 			
 
 			
-				departementsOccitanie.add(ville);
 			
 
 		}
@@ -180,8 +182,12 @@ public class LectureFichier {
 
 		// Etape 6
 
-		System.out.println("Villes les plus grandes d'Héraut :");
-		System.out.println(Ville.Rechercher10PlusGrandesVilles(departementsOccitanie, "34"));
+		try {
+			System.out.println("Villes les plus grandes d'Héraut :\n\n"+Ville.Rechercher10PlusGrandesVilles(listeCompleteVilles, "34"));
+		} catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+
 
 		// Etape 7
 		System.out.println("La population totale de l'occitanie est de : " + populationOccitanie + " âmes.");
@@ -191,6 +197,20 @@ public class LectureFichier {
 		System.out.println("Villes les plus grandes d'Occitanie :");
 		System.out.println(villesLesPlusGrandesOccitanie);
 		
+
+		// Dans le cas où vous étiez parti sur le TP facile, il faudra que vous ajoutiez quelques interactions avec l'utilisateur au moyen de la classe Scanner. Cela vous rapprochera de ce qui était demandé dans le TP le plus difficile.
+		System.out.println("Les plus grandes villes de quel département souhaitez-vous voir (deux chiffres)? :");
+		Integer choix = sc.nextInt();
+		
+
+		try {
+			System.out.println("Voici les villes les plus peuplées du département "+choix+"\n\n"+Ville.Rechercher10PlusGrandesVilles(listeCompleteVilles, choix.toString()));
+		} catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+		
+		sc.close();
 		
 		
 

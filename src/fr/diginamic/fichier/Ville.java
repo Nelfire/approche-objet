@@ -184,7 +184,17 @@ public class Ville {
 		return villesLesPlusGrandes;
 	}
 
-	public static ArrayList<Ville> Rechercher10PlusGrandesVilles(ArrayList<Ville> liste, String departement) {
+	/**
+	 * Retourne la liste des 10 plus grandes villes
+	 * @param liste = la liste de villes
+	 * @param departement = le département choisi
+	 * @return
+	 * @throws Exception = si le département passé en parametre n'est pas correctement formaté
+	 */
+	public static ArrayList<Ville> Rechercher10PlusGrandesVilles(ArrayList<Ville> liste, String departement) throws Exception {
+		if(departement.length()>2 || departement.length()<2) {
+			throw new Exception("Format du département incorrect !");
+		}
 		ArrayList<Ville> villesLesPlusGrandes = new ArrayList<Ville>();
 		for (Ville villeCourante : liste) {
 			if (villeCourante.getCodeDepartement().contentEquals(departement)) {
